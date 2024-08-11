@@ -124,7 +124,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/secret"):
+@app.get("/secret")
 def secret():
     return {"message":"i love my cat soooooo much"}      
 
