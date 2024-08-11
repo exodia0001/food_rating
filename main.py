@@ -124,6 +124,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/secret"):
+def secret():
+    return {"message":"i love my cat soooooo much"}      
+
 @app.get("/food/{code_bar}")
 def get_food(code_bar: str):
     data = get_food_data(code_bar)
